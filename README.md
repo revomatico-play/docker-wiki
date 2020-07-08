@@ -1,6 +1,11 @@
 # docker-wiki
-[Wiki.JS](https://github.com/Requarks/wiki) containerization
+Wiki.JS containerization
 
+## Contributors
+- George Budau
+
+## Purpose
+Deploy [Wiki.js](https://github.com/Requarks/wiki) with PostgresSQL Database
 
 ## Technologies
 - Docker
@@ -8,7 +13,4 @@
 - Ansible
 
 ## License
-- MIT
-
-## Contributors
-- George Budau
+MIT
