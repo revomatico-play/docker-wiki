@@ -5,14 +5,13 @@ Wiki.JS containerization
 
 =======
 ## Contributors
- - Mihaita-Catalin Pavel
- - Andreea Neculai
- - Matei-Iordache
- - Filimon Adrian
- - Nastase Maria
- - Mihaita-Catalin Pavel
- - Andreea Neculai
- - Cristian Chiru [cr1cr1](https://github.com/cr1cr1)
+- Dima Catalin Stefan
+- Filimon Adrian
+- Nastase Maria
+- Mihaita-Catalin Pavel
+- Andreea Neculai
+- Cristian Chiru [cr1cr1](https://github.com/cr1cr1)
+- Matei-Iordache
 
 ## Purpose
 
