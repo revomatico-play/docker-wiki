@@ -12,6 +12,7 @@ Wiki.JS containerization
 - Andreea Neculai
 - Cristian Chiru [cr1cr1](https://github.com/cr1cr1)
 - Matei-Iordache
+- Octav Teculescu [KennyTheBard](https://github.com/KennyTheBard)
 
 ## Purpose
 
