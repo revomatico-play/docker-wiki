@@ -3,7 +3,7 @@
 Wiki.JS containerization
 
 
-=======
+
 ## Contributors
 - Dima Catalin Stefan
 - Filimon Adrian
@@ -13,7 +13,7 @@ Wiki.JS containerization
 - Cristian Chiru [cr1cr1](https://github.com/cr1cr1)
 - Matei-Iordache
 - Octav Teculescu [KennyTheBard](https://github.com/KennyTheBard)
-
+- Ioan Mircea 
 ## Purpose
 
 Deploy [Wiki.js](https://github.com/Requarks/wiki) with PostgresSQL Database
