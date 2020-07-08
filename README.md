@@ -2,4 +2,4 @@
 Wiki.JS containerization
 
 ## Contributors
-- Octav Teculescu
+- Octav Teculescu (https://github.com/KennyTheBard)
