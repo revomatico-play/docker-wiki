@@ -2,7 +2,8 @@
 Wiki.JS containerization
 
 ## Contributors
-    - Mihaita-Catalin Pavel
+ - Mihaita-Catalin Pavel
+ - Andreea Neculai
 
 ## Purpose
 
@@ -15,4 +16,3 @@ Deploy [Wiki.js](https://github.com/Requarks/wiki) with PostgresSQL Database
 
 ## License
 MIT
-
