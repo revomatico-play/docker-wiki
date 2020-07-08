@@ -1,0 +1,33 @@
+version: "3.7"
+
+services:
+  wikijs:
+    build: .
+    depends_on:
+      - db
+    volumes:
+      - ./data:/wiki/data
+    environment:
+      PORT: 3000 # DO NOT CHANGE! Use ports below to specify listening port.
+      DB_TYPE: postgres
+      DB_HOST: db
+      DB_PORT: 5432
+      DB_USER: wikijs
+      DB_PASS: wikijsrocks
+      DB_NAME: wiki
+    restart: unless-stopped
+    expose:
+      - 3000
+  db:
+    image: postgres:9-alpine
+    volumes:
+      - ./db:/var/lib/postgresql/data
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: wikijs
+      POSTGRES_PASSWORD: wikijsrocks
+      POSTGRES_DB: wiki
+    logging:
+      driver: "none"
+    expose:
+      - 5432
