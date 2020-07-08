@@ -1,7 +1,5 @@
 # docker-wiki
 Wiki.JS containerization
 
-
-
-#license 
--mit
+# Contribuitors
+-Dima Catalin Stefan
