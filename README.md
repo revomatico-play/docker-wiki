@@ -10,3 +10,6 @@ Wiki.JS containerization
 
 #License
 -MIT
+
+#Contributors
+-Andreea Neculai
