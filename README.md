@@ -3,7 +3,7 @@
 Wiki.JS containerization
 
 ## Contributors
-
+- Nastase Maria
 - Mihaita-Catalin Pavel
 - Andreea Neculai
 - Cristian Chiru [cr1cr1](https://github.com/cr1cr1)
