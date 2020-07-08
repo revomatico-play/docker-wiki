@@ -1,4 +1,4 @@
-version: "3.7"
+version: "3.3"
 
 services:
   wikijs:
@@ -16,8 +16,8 @@ services:
       DB_PASS: wikijsrocks
       DB_NAME: wiki
     restart: unless-stopped
-    expose:
-      - 3000
+    ports:
+      - 3000:3000
   db:
     image: postgres:9-alpine
     volumes:
