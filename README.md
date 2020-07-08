@@ -3,6 +3,7 @@
 Wiki.JS containerization
 
 ## Contributors
+- Dima Catalin Stefan
 - Filimon Adrian
 - Nastase Maria
 - Mihaita-Catalin Pavel
@@ -22,3 +23,4 @@ Deploy [Wiki.js](https://github.com/Requarks/wiki) with PostgresSQL Database
 ## License
 
 MIT
+
