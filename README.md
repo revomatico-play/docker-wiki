@@ -1,5 +1,5 @@
 # docker-wiki
 Wiki.JS containerization
 
-# Contribuitors
+# Contributors
 -Dima Catalin Stefan
