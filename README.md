@@ -1,5 +1,5 @@
 # docker-wiki
 Wiki.JS containerization
 
-# Contributors
+## Contributors
 - Filimon Adrian
