@@ -8,3 +8,6 @@ Wiki.JS containerization
 
 ## License
 - MIT
+
+## Contributors
+- George Budau
