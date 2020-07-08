@@ -14,4 +14,4 @@ Deploy [Wiki.js](https://github.com/Requarks/wiki) with PostgresSQL Database
 MIT
 
 ## Contributors
-- Octav Teculescu (https://github.com/KennyTheBard)
+- Octav Teculescu [KennyTheBard](https://github.com/KennyTheBard)
