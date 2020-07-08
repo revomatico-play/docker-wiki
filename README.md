@@ -3,6 +3,7 @@
 Wiki.JS containerization
 
 ## Contributors
+- Filimon Adrian
 - Nastase Maria
 - Mihaita-Catalin Pavel
 - Andreea Neculai
