@@ -21,13 +21,15 @@ services:
   db:
     image: postgres:9-alpine
     volumes:
-      - ./db:/var/lib/postgresql/data
+      - pgdata:/var/lib/postgresql/data
     restart: unless-stopped
     environment:
       POSTGRES_USER: wikijs
       POSTGRES_PASSWORD: wikijsrocks
       POSTGRES_DB: wiki
-    logging:
-      driver: "none"
+#    logging:
+#      driver: "none"
     expose:
       - 5432
+volumes:
+  pgdata:
