@@ -1,7 +1,4 @@
 - hosts: localhost
-  tasks:
-  - debug:
-      var: my_ansible_command
-#      msg: "{{ my_ansible_command }}"
-  - name: Deploy wiki.js
-    command: "docker-compose -p wiki {{ my_ansible_command }}"
+  roles:
+  - ansible-role-deploy
+
