@@ -1,4 +1,4 @@
 - hosts: localhost
   tasks:
   - name: Deploy wiki.js
-    command: docker-compose -p wiki up
+    command: docker-compose -p wiki up -d
