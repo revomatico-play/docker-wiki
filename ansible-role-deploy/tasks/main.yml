@@ -1,9 +1,37 @@
-- name: Debugging some vars
-  debug:
-    var: my_ansible_command
+#- name: Debugging some vars
+#  debug:
+#    msg: |
+#      {{ ansible_inventory_sources[0] | dirname }}
+#- meta: end_play
+
+- name: Create temporary work directory
+  tempfile:
+    state: directory
+    suffix: docker-compose
+  register: mytemp
+
+#- debug:
+#    msg: |
+#      {{ lookup('template', 'docker-compose.yaml.j2') }}
+#      ---
+#      mytemp: {{ mytemp | to_nice_yaml }}
+
+- name: Generate docker compose file
+  template:
+    src: 'docker-compose.yaml.j2'
+    dest: "{{ mytemp.path }}/docker-compose.yaml"
+
+- name: Copy Dockerfile to temp
+  copy:
+    src: "{{ ansible_inventory_sources[0] | dirname }}/Dockerfile"
+    dest: "{{ mytemp.path }}"
+
+#- meta: end_play
+#- fail:
+#    msg: "I have failed you master!"
 
 - name: Deploy wiki.js
-  command: "docker-compose -p wiki {{ item }}"
+  command: "docker-compose -f {{ mytemp.path }}/docker-compose.yaml -p {{ wikijs_project_name }} {{ item }}"
   register: my_output
   loop:
   - down

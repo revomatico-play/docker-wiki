@@ -1,1 +1,5 @@
 my_ansible_command: 'up -d'
+wikijs_user: wikijs
+wikijs_password: wikijsrocks
+wikijs_project_name: wiki
+wikijs_port: 3000

@@ -1,1 +1,4 @@
-my_ansible_command: up -d
+wikijs_user: someuser
+wikijs_password: somepass
+wikijs_project_name: cucu
+wikijs_port: 3001
