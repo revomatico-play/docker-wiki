@@ -3,4 +3,9 @@
     var: my_ansible_command
 #    msg: "{{ my_ansible_command }}"
 - name: Deploy wiki.js
-  command: "docker-compose -p wiki {{ my_ansible_command }}"
+  command: "docker-compose -p wiki {{ item }}"
+  loop:
+  - down
+  - up -d
+  - ps
+
