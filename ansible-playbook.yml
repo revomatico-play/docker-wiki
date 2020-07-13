@@ -6,4 +6,3 @@
     - meta: end_play
   roles:
   - ansible-role-deploy
-
