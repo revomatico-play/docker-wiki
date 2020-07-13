@@ -4,8 +4,15 @@
 #    msg: "{{ my_ansible_command }}"
 - name: Deploy wiki.js
   command: "docker-compose -p wiki {{ item }}"
+  register: my_output
   loop:
   - down
   - up -d
   - ps
 
+- debug:
+    msg: |
+      ---
+      my_output:
+      {{ my_output.results | selectattr('stdout', 'ne', '') | map(attribute='stdout') | list | to_nice_yaml }}
+      ----
