@@ -1,7 +1,7 @@
 - name: Debugging some vars
   debug:
     var: my_ansible_command
-#    msg: "{{ my_ansible_command }}"
+
 - name: Deploy wiki.js
   command: "docker-compose -p wiki {{ item }}"
   register: my_output
@@ -13,6 +13,6 @@
 - debug:
     msg: |
       ---
-      my_output:
+      my_output (with list filtered by not empty attribute 'stdout' and select only the values of 'stdout'):
       {{ my_output.results | selectattr('stdout', 'ne', '') | map(attribute='stdout') | list | to_nice_yaml }}
       ----
