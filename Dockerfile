@@ -1,6 +1,7 @@
 FROM requarks/wiki:2
 
-USER root 
+# USER root
 
-RUN apk add python3-pip
+RUN apk add python3
 
+USER node

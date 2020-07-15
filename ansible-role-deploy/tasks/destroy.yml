@@ -1,0 +1,20 @@
+- name: Gather all containers
+  shell: "docker ps -aq | xargs -n1 docker inspect --format={{ '{{' }}.Name{{ '}}' }} | grep '^/{{ item }}_'"
+  register: _list_of_containers
+  loop: "{{ wikijs_list_of_projects }}"
+  ignore_errors: yes
+
+- debug:
+    msg: |
+        {{ _list_of_containers.results | map(attribute='stdout_lines') | list | flatten | to_nice_yaml}}
+
+#- meta: end_play
+
+- name: Bring all wikis down !!DANGER will robinson!!
+  command: docker rm -f {{ item }}
+  loop: "{{ _list_of_containers.results | map(attribute='stdout_lines') | list | flatten }}"
+
+- name: Delete all wiki networks
+  shell: docker network rm {{ item }}_default
+  loop: "{{ wikijs_list_of_projects }}"
+  ignore_errors: yes

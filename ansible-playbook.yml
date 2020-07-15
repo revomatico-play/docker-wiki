@@ -1,0 +1,8 @@
+- hosts: localhost
+  pre_tasks:
+  - when: "{{ wikijs_list_of_projects | d([]) | length > 0 }}"
+    block:
+    - include_tasks: "ansible-role-deploy/tasks/destroy.yml"
+    - meta: end_play
+  roles:
+  - ansible-role-deploy

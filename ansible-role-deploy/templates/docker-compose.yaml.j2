@@ -1,0 +1,41 @@
+version: "3.3"
+
+services:
+  wikijs:
+    # image: requarks/wiki:2
+    build: .
+#    dockerfile: Dockerfile
+    depends_on:
+      - db
+    volumes:
+      - {{ wikijs_data_dir }}:/wiki/data
+    environment:
+      PORT: 3000 # DO NOT CHANGE! Use ports below to specify listening port.
+      DB_TYPE: postgres
+      DB_HOST: db
+      DB_PORT: 5432
+      DB_USER: {{ wikijs_user }}
+{% if wikijs_password | default('') | length %}
+      DB_PASS: {{ wikijs_password }}
+{% endif %}
+      DB_NAME: wiki
+    restart: unless-stopped
+    ports:
+      - {{ wikijs_port }}:3000
+  db:
+    image: postgres:9-alpine
+    volumes:
+      - {{ wikijs_project_name }}-pgdata:/var/lib/postgresql/data
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: {{ wikijs_user }}
+{% if wikijs_password | default('') | length %}
+      POSTGRES_PASSWORD: {{ wikijs_password }}
+{% endif %}
+      POSTGRES_DB: wiki
+#    logging:
+#      driver: "none"
+    expose:
+      - 5432
+volumes:
+  {{ wikijs_project_name }}-pgdata:
