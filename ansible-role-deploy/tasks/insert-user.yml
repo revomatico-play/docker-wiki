@@ -1,0 +1,8 @@
+- block: 
+  - name: Generate user insert SQL
+    set_fact:
+      _user_sql: "{{ lookup ('template', 'insert-user.sql.j2') }}"
+    
+  - name: Insert
+    command: docker exec -i {{ wikijs_project_name }}_db_1 psql wiki {{ wikijs_user }} -c {{ _user_sql | quote}}
+  tags: insert-user

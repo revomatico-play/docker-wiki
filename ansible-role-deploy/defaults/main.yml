@@ -4,3 +4,8 @@ wikijs_password: wikijsrocks
 wikijs_project_name: wiki
 wikijs_port: 3000
 wikijs_data_dir: "{{ ansible_inventory_sources[0] | dirname }}/data"
+user: 
+  email: "admin@admin.com"
+  name: "admin"
+  timezone: "Europe/Athens"
+  
