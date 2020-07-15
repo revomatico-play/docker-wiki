@@ -10,6 +10,17 @@
     suffix: docker-compose
   register: mytemp
 
+- name: Create data directory
+  file:
+    state: directory
+    path: "{{ wikijs_data_dir }}/{{ item }}"
+    recurse: yes
+    mode: '777'
+  loop:
+    - cache
+    - uploads
+    - content
+
 #- debug:
 #    msg: |
 #      {{ lookup('template', 'docker-compose.yaml.j2') }}

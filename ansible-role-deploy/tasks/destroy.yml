@@ -2,6 +2,7 @@
   shell: "docker ps -aq | xargs -n1 docker inspect --format={{ '{{' }}.Name{{ '}}' }} | grep '^/{{ item }}_'"
   register: _list_of_containers
   loop: "{{ wikijs_list_of_projects }}"
+  ignore_errors: yes
 
 - debug:
     msg: |
@@ -16,3 +17,4 @@
 - name: Delete all wiki networks
   shell: docker network rm {{ item }}_default
   loop: "{{ wikijs_list_of_projects }}"
+  ignore_errors: yes

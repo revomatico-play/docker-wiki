@@ -2,12 +2,13 @@ version: "3.3"
 
 services:
   wikijs:
+    # image: requarks/wiki:2
     build: .
 #    dockerfile: Dockerfile
     depends_on:
       - db
     volumes:
-      - ./data:/wiki/data
+      - {{ wikijs_data_dir }}:/wiki/data
     environment:
       PORT: 3000 # DO NOT CHANGE! Use ports below to specify listening port.
       DB_TYPE: postgres
