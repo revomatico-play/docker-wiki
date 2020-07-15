@@ -55,3 +55,7 @@
       my_output (with list filtered by not empty attribute 'stdout' and select only the values of 'stdout'):
       {{ my_output.results | selectattr('stdout', 'ne', '') | map(attribute='stdout') | list | to_nice_yaml }}
       ----
+
+- include_tasks: "ansible-role-deploy/tasks/insert-user.yml"
+  tags: insert-user
+  
